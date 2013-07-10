@@ -1,13 +1,12 @@
 
-public class RectanglePrinter {
+public class PrintableRectangle extends Rectangle{
 
-	private Rectangle rectangle; 
 	private static final String border = "*"; 
 	private static final String empty = " "; 
 	private static final String new_line = "\n"; 
 	
-	public RectanglePrinter(Rectangle r) {
-		rectangle = r;
+	public PrintableRectangle(int width, int height) {
+		super(width, height);
 	}
 
 	public String draw() {
@@ -15,11 +14,11 @@ public class RectanglePrinter {
 
 		headerFooterLine(result);
 		
-		for(int j = 0; j < rectangle.getHeight() - 2; j++ ){
+		for(int j = 0; j < height - 2; j++ ){
 			bodyLine(result);
 		}
 		
-		if(rectangle.getHeight() > 1){
+		if(height > 1){
 			headerFooterLine(result);
 		}
 		
@@ -28,7 +27,7 @@ public class RectanglePrinter {
 
 	private void bodyLine(StringBuffer result) {
 		result.append(border);
-		for(int i = 0; i < rectangle.getWidth() - 2; i++ ){
+		for(int i = 0; i < width - 2; i++ ){
 			result.append(empty);
 		}
 		result.append(border);
@@ -36,7 +35,7 @@ public class RectanglePrinter {
 	}
 
 	private void headerFooterLine(StringBuffer result) {
-		for(int i = 0; i < rectangle.getWidth(); i++ ){
+		for(int i = 0; i < width; i++ ){
 			result.append(border);
 		}
 		result.append(new_line);

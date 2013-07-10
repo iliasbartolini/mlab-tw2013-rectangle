@@ -3,12 +3,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class RectanglePrinterTest {
+public class PrintableRectangleTest {
 
 	@Test
 	public void should_print_a_rectangle() {
-		Rectangle r = new Rectangle(5,3);
-		RectanglePrinter printer = new RectanglePrinter(r);
+		PrintableRectangle printer = new PrintableRectangle(5,3);
 		
 		String draw = printer.draw();
 		
@@ -20,8 +19,7 @@ public class RectanglePrinterTest {
 
 	@Test
 	public void should_print_a_small_rectangle() {
-		Rectangle r = new Rectangle(1,1);
-		RectanglePrinter printer = new RectanglePrinter(r);
+		PrintableRectangle printer = new PrintableRectangle(1,1);
 		
 		String draw = printer.draw();
 		
