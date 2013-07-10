@@ -17,5 +17,4 @@ public class Rectangle {
 		return (width + height) * 2;
 	}
 
-	// trivia comment
 }
