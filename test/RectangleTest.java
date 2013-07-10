@@ -4,7 +4,7 @@ import org.junit.Test;
 
 
 public class RectangleTest {
-
+//I have added this comment as David
 	@Test
 	public void should_calculate_area() {
 		Rectangle rectangle = new Rectangle(10,15);
