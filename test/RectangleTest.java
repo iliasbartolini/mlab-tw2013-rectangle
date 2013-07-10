@@ -10,7 +10,7 @@ public class RectangleTest {
 		Rectangle rectangle = new Rectangle(10,15);
 		
 		int area = rectangle.area();
-		
+		//this is my change
 		assertEquals(150, area);
 	}
 
