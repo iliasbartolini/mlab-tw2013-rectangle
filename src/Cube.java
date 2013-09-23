@@ -1,6 +1,10 @@
 
 public class Cube {
-
+	/*
+	 * Hello Everyone, I am just checking if you are still using git
+	 * Godluck Akyoo<gakyoo@citywebtechnologies.com>
+	 * lots of greetings from Tanzania 
+	 */
 	int width;
 	int length;
 	int height;
