@@ -22,4 +22,37 @@ public class RectangleTest {
 		
 		assertEquals(50, perimeter);
 	}
+	
+	@Test
+	public void should_draw_rectangle(){
+		Rectangle rectangle = new Rectangle(3, 5);
+		
+		String rec = rectangle.draw();
+		
+		String expected = "*****\n"+
+						  "*   *\n"+
+						  "*****\n";
+		assertEquals(expected, rec);
+	}
+	
+	@Test
+	public void should_draw_1By1rectangle(){
+		Rectangle rectangle = new Rectangle(1, 1);
+		rectangle.setBorder(".");
+		String rec = rectangle.draw();
+		
+		String expected = ".\n";
+		assertEquals(expected, rec);
+	}
+	
+	@Test
+	public void show_draw_dotted_rectangle(){
+		Rectangle rectangle = new Rectangle(3, 5);
+		rectangle.setBorder(".");
+		String rec = rectangle.draw();
+		String expected = ".....\n"
+						+ ".   .\n"
+						+ ".....\n";
+		assertEquals(expected, rec);
+	}
 }
